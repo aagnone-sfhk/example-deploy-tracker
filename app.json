@@ -4,7 +4,7 @@
   "repository": "https://github.com/aagnone-sfhk/example-deploy-tracker",
   "keywords": ["python", "fastapi"],
   "scripts": {
-    "postdeploy": "chmod +x etc/notify_deployment.sh && etc/notify_deployment.sh testing"
+    "postdeploy": "env && chmod +x etc/notify_deployment.sh && etc/notify_deployment.sh testing"
   },
   "env": {
     "DEPLOY_ID": {
