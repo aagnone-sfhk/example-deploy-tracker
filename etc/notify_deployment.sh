@@ -9,9 +9,6 @@ set -e
 # The endpoint to send the notification to.
 NOTIFICATION_ENDPOINT="https://aa-admin-2cb242e66780.herokuapp.com/heroku-app-deploy-events"
 
-# The HEROKU_APP_NAME environment variable is automatically set by Heroku in the postdeploy environment.
-# We check if it's set and provide a fallback just in case.
-APP_NAME=${HEROKU_APP_NAME:-"unknown_app"}
 DEPLOYMENT_SOURCE=${1:-"unknown"}
 DEPLOY_ID=${DEPLOY_ID:-"unknown"}
 
@@ -25,7 +22,6 @@ echo "---"
 JSON_PAYLOAD=$(cat <<EOF
 {
   "source": "$DEPLOYMENT_SOURCE",
-  "app_name": "$APP_NAME",
   "deploy_id": "$DEPLOY_ID",
   "deployed_at": "$(date -u +%Y-%m-%dT%H:%M:%SZ)"
 }
