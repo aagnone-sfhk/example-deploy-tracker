@@ -13,7 +13,7 @@ NOTIFICATION_ENDPOINT="https://aa-admin-2cb242e66780.herokuapp.com/heroku-app-de
 # We check if it's set and provide a fallback just in case.
 env | sort
 APP_NAME=${HEROKU_APP_NAME:-"unknown_app"}
-DEPLOYMENT_SOURCE=${DEPLOYMENT_SOURCE:-"unknown"}
+DEPLOYMENT_SOURCE=${1:-"unknown"}
 
 echo "---"
 echo "Starting deployment notification script."
