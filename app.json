@@ -6,10 +6,5 @@
   "scripts": {
     "postdeploy": "chmod +x etc/notify_deployment.sh && etc/notify_deployment.sh testing"
   },
-  "env": {
-    "DEPLOY_ID": {
-      "description": "The ID of the deploy",
-      "generator": "secret"
-    }
-  }
+  "env": {}
 }
