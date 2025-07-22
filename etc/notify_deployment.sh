@@ -12,6 +12,8 @@ NOTIFICATION_ENDPOINT="https://aa-admin-2cb242e66780.herokuapp.com/heroku-app-de
 # The HEROKU_APP_NAME environment variable is automatically set by Heroku in the postdeploy environment.
 # We check if it's set and provide a fallback just in case.
 env | sort
+which heroku && heroku whoami && heroku info
+which jq
 APP_NAME=${HEROKU_APP_NAME:-"unknown_app"}
 DEPLOYMENT_SOURCE=${1:-"unknown"}
 
