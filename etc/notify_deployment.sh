@@ -15,6 +15,7 @@ env
 APP_NAME=${HEROKU_APP_NAME:-"unknown_app"}
 DEPLOYMENT_SOURCE=${1:-"unknown"}
 DEPLOY_ID=${DEPLOY_ID:-"unknown"}
+exit 1
 
 echo "---"
 echo "Starting deployment notification script."
