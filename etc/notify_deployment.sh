@@ -35,7 +35,7 @@ EOF
 # -H "Content-Type: application/json": Sets the content type header.
 # -d "$JSON_PAYLOAD": Provides the data for the request body.
 # --fail: Makes curl exit with an error code if the HTTP request fails (e.g., 4xx or 5xx response).
-curl --fail -X POST \
+curl --fail --location -X POST \
   -H "Content-Type: application/json" \
   -d "$JSON_PAYLOAD" \
   "$NOTIFICATION_ENDPOINT"
