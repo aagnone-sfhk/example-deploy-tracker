@@ -14,11 +14,4 @@ _build/
 .ruff_cache
 .pytest_cache
 .mypy_cache
-uv.lock
 .coverage
-# Salesforce
-.codegenie/
-
-# Heroku TPS TEMP
-tpsGetLock_response.txt
-tpsRecordRelease_response.txt
