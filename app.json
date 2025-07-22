@@ -13,7 +13,7 @@
     },
     "DEPLOYMENT_SOURCE": {
       "description": "The Heroku Button which deployed the app",
-      "required": true
+      "value": "testing"
     }
   }
 }

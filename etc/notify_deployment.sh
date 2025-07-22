@@ -13,6 +13,7 @@ NOTIFICATION_ENDPOINT="https://aa-admin-2cb242e66780.herokuapp.com/heroku-app-de
 # We check if it's set and provide a fallback just in case.
 env | sort
 APP_NAME=${HEROKU_APP_NAME:-"unknown_app"}
+DEPLOYMENT_SOURCE=${DEPLOYMENT_SOURCE:-"unknown"}
 
 echo "---"
 echo "Starting deployment notification script."
@@ -23,9 +24,9 @@ echo "---"
 # Construct the JSON payload. Using a heredoc makes it easy to write multi-line JSON.
 JSON_PAYLOAD=$(cat <<EOF
 {
-  "source": "Heroku Button 1",
+  "source": "$DEPLOYMENT_SOURCE",
   "app_name": "$APP_NAME",
-  "deployedAt": "$(date -u +%Y-%m-%dT%H:%M:%SZ)"
+  "deployed_at": "$(date -u +%Y-%m-%dT%H:%M:%SZ)"
 }
 EOF
 )
