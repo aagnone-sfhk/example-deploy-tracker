@@ -6,9 +6,6 @@
   "buildpacks": [
     {
       "url": "https://github.com/heroku/heroku-buildpack-python"
-    },
-    {
-      "url": "https://github.com/aagnone-sfhk/heroku-button-telemetry.git"
     }
   ],
   "scripts": {
