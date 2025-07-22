@@ -1,0 +1,19 @@
+{
+  "name": "Deploy a Heroku App",
+  "description": "A barebones Python app, which can easily be deployed to Heroku.",
+  "repository": "https://github.com/aagnone-sfhk/example-deploy-tracker",
+  "keywords": ["python", "fastapi"],
+  "scripts": {
+    "postdeploy": "chmod +x etc/notify_deployment.sh && etc/notify_deployment.sh"
+  },
+  "env": {
+    "DEPLOY_ID": {
+      "description": "The ID of the deploy",
+      "generator": "secret"
+    },
+    "DEPLOYMENT_SOURCE": {
+      "description": "The Heroku Button which deployed the app",
+      "required": true
+    }
+  }
+}
